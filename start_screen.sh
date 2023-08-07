@@ -25,7 +25,7 @@ show_menu() {
 }
 
 list_sessions() {
-    screen -ls
+    screen -list
 }
 
 create_new_session() {
@@ -39,12 +39,12 @@ toggle_pause_resume() {
 }
 
 stop_all_sessions() {
-    screen -ls | grep -oP '^\d+\.[^[:space:]]+' | awk '{print $1}' | xargs -I {} screen -S {} -X quit
+    screen -list | grep -oP '^\s*\d+\.[^[:space:]]+' | awk '{print $1}' | xargs -I {} screen -S {} -X quit
     echo -e "${GREEN}所有会话已停止。${NC}"
 }
 
 delete_all_sessions() {
-    screen -ls | grep -oP '^\d+\.[^[:space:]]+' | awk '{print $1}' | xargs -I {} screen -S {} -X quit
+    screen -list | grep -oP '^\s*\d+\.[^[:space:]]+' | awk '{print $1}' | xargs -I {} screen -S {} -X quit
     echo -e "${GREEN}所有会话已删除。${NC}"
 }
 
