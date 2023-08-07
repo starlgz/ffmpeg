@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # ANSI颜色代码
-RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # 恢复默认颜色
@@ -36,7 +35,7 @@ show_menu() {
 
 stop_all_sessions() {
     screen -ls | grep -oP '^\d+\.[^[:space:]]+' | awk '{print $1}' | xargs -I {} screen -S {} -X quit
-    echo -e "${RED}所有会话已停止。${NC}"
+    echo -e "${GREEN}所有会话已停止。${NC}"
 }
 
 main() {
@@ -71,8 +70,8 @@ main() {
             23) export_window_content ;;
             24) import_window_content ;;
             25) stop_all_sessions ;;
-            0) echo -e "${RED}谢谢使用，再见！${NC}" && break ;;
-            *) echo -e "${RED}无效选项，请重新输入。${NC}" ;;
+            0) echo -e "${GREEN}谢谢使用，再见！${NC}" && break ;;
+            *) echo -e "${GREEN}无效选项，请重新输入。${NC}" ;;
         esac
 
         read -p "按下 Enter 键继续..." enter_key
