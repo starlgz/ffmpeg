@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # 检查当前用户是否具有管理员权限
-if [ "$(id -u)" -eq 0 ]; then
-    echo "请勿使用管理员权限运行该脚本。"
+if [ "$(id -u)" -ne 0 ]; then
+    echo "请使用管理员权限运行该脚本。"
     exit 1
 fi
 
 # 检查是否已安装 screen，如果没有安装则进行安装
 if ! command -v screen &> /dev/null; then
     echo "正在安装 screen..."
-    sudo apt-get update
-    sudo apt-get install -y screen
+    apt-get update
+    apt-get install -y screen
 fi
 
 start_screen_session() {
