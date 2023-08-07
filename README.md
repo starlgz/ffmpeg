@@ -4,9 +4,10 @@
 curl -o ffmpeg_stream.sh https://raw.githubusercontent.com/starlgz/ffmpeg/main/ffmpeg_stream.sh && chmod +x ffmpeg_stream.sh && ./ffmpeg_stream.sh
 ```
 
-# 第二个脚本
+# 安装ffmpeg
 ```
-curl -o ffmpeg.sh https://raw.githubusercontent.com/starlgz/ffmpeg/main/ffmpeg.sh && chmod +x ffmpeg.sh && ./ffmpeg.sh
+curl -sSL -o install_ffmpeg_snap.sh https://raw.githubusercontent.com/example_user/install_ffmpeg_snap_script/master/install_ffmpeg_snap.sh && chmod +x install_ffmpeg_snap.sh && ./install_ffmpeg_snap.sh
+
 ```
 
 # screen的便捷使用
