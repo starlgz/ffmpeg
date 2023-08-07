@@ -6,3 +6,7 @@
 ```
 curl -o ffmpeg_stream.sh https://raw.githubusercontent.com/starlgz/ffmpeg/main/ffmpeg_stream.sh && chmod +x ffmpeg_stream.sh && ./ffmpeg_stream.sh
 ```
+# screen的便捷使用
+```
+curl -o start_screen.sh https://raw.githubusercontent.com/starlgz/ffmpeg/main/start_screen.sh && chmod +x start_screen.sh && ./start_screen.sh
+```
