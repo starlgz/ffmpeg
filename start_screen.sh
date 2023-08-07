@@ -16,9 +16,11 @@ install_screen() {
 show_menu() {
     clear
     echo -e "${GREEN}=== GNU Screen 功能菜单 ===${NC}"
-    echo -e "${YELLOW}1. 查看会话列表\t2. 创建新会话${NC}"
-    echo -e "${YELLOW}3. 暂停/恢复会话\t4. 停止所有会话${NC}"
-    echo -e "${YELLOW}0. 退出脚本${NC}"
+    echo -e "1. 查看会话列表"
+    echo -e "2. 创建新会话"
+    echo -e "3. 暂停/恢复会话"
+    echo -e "4. 停止所有会话"
+    echo -e "0. 退出脚本"
 }
 
 list_sessions() {
