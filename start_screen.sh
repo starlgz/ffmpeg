@@ -1,16 +1,13 @@
 #!/bin/bash
 
-# 检查当前用户是否具有管理员权限
-if [ "$(id -u)" -ne 0 ]; then
-    echo "请使用管理员权限运行该脚本。"
-    exit 1
-fi
+# 作者名字
+author_name="满天繁星"
 
 # 检查是否已安装 screen，如果没有安装则进行安装
 if ! command -v screen &> /dev/null; then
     echo "正在安装 screen..."
-    apt-get update
-    apt-get install -y screen
+    sudo apt-get update
+    sudo apt-get install -y screen
 fi
 
 start_screen_session() {
@@ -50,6 +47,7 @@ list_screen_sessions() {
 # 显示菜单选项
 while true; do
     echo "======= Screen 一键使用菜单 ======="
+    echo "作者: $author_name"
     echo "1. 查看已存在的会话"
     echo "2. 启动一个新的会话"
     echo "3. 退出脚本"
